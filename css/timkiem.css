@@ -57,7 +57,7 @@ img{
 
 #main-header{
     display: grid;
-    grid-template-areas: "logo search shop";
+    grid-template-areas: "search shop";
     align-items: center;
     justify-items: center;
 }
@@ -79,9 +79,6 @@ img{
     height: 40px;
     margin: 0px;
     padding: 0px;
-}
-#logo{
-    grid-area: logo;
 }
 #shop{
     grid-area: shop;

@@ -28,7 +28,7 @@ footer{
 }
 #main-header{
     display: grid;
-    grid-template-areas: "logo search shop";
+    grid-template-areas: "search image shop";
     align-items: center;
     justify-items: center;
 }
@@ -117,4 +117,19 @@ footer{
 #feedback{
     font-size: 15px;
     text-align: center;
+}
+#shop{
+    grid-area: shop;
+    width: 200px;
+    height: 50px;
+    background-color:blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+}
+#search{
+    grid-area: search;
+}
+#logo{
+    grid-area: image;
 }
