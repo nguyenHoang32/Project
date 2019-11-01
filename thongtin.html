@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/thongtin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thông tin khách hàng</title>
+</head>
+<body>
+    <div id="main-container">
+            <h1>Thanh toán</h1>
+            <p>Điền vào các mục dưới đây để hoàn thành mua hàng của bạn !</p>
+            <div id="container"><form onsubmit="validate()">
+                    <fieldset>
+                        <legend>THÔNG TIN</legend>
+                    <label><span class="title">Họ tên :</span> <input type="text" id="name" onblur="validate1()"></label><span
+                        class="error" id="name-error"></span>
+                    <label><span class="title">Số điện thoại :</span> <input type="text" id="number" onblur="validate2()"></label><span
+                        class="error" id="number-error"></span>
+                    <br>
+                    <label><span class="title">Tỉnh/Thành phố:</span>
+                    <select id="select" onblur="validate3()">
+                        <option selected>Chọn Tỉnh/Thành phố</option>
+                        <option>Hồ Chí Minh</option>
+                        <option>Hà Nội</option>
+                        <option>Đà Nẵng</option>
+                        <option>An Giang</option>
+                        <option>Bà Rịa - Vũng Tàu</option>
+                        <option>Bắc Giang</option>
+                        <option>Bắc Kạn</option>
+                        <option>Bạc Liêu</option>
+                        <option>Bắc Ninh</option>
+                        <option>Bến Tre</option>
+                        <option>Bình Dương</option>
+                        <option>Bình Phước</option>
+                        <option>Bình Thuận</option>
+                        <option>Bình Định</option>
+                        <option>Cà Mau</option>
+                        <option>Cần Thơ</option>
+                        <option>Cao Bằng</option>
+                        <option>Gia Lai</option>
+                        <option>Hà Giang</option>
+                        <option>Hà Nam</option>
+                        <option>Hà Tĩnh</option>
+                        <option>Hải Dương</option>
+                        <option>Hải Phòng</option>
+                        <option>Hậu Giang</option>
+                        <option>Hoà Bình</option>
+                        <option>Hưng Yên</option>
+                        <option>Khánh Hòa</option>
+                        <option>Kiên Giang</option>
+                        <option>Kon Tum</option>
+                        <option>Lai Châu</option>
+                        <option>Lâm Đồng</option>
+                        <option>Lạng Sơn</option>
+                        <option>Lào Cai</option>
+                        <option>Long An</option>
+                        <option>Nam Định</option>
+                        <option>Nghệ An</option>
+                        <option>Ninh Bình</option>
+                        <option>Ninh Thuận</option>
+                        <option>Phú Thọ</option>
+                        <option>Phú Yên</option>
+                        <option>Quảng Bình</option>
+                        <option>Quảng Nam</option>
+                        <option>Quảng Ngãi</option>
+                        <option>Quảng Ninh</option>
+                        <option>Quảng Trị</option>
+                        <option>Sóc Trăng</option>
+                        <option>Sơn La</option>
+                        <option>Tây Ninh</option>
+                        <option>Thái Bình</option>
+                        <option>Thái Nguyên</option>
+                        <option>Thanh Hóa</option>
+                        <option>Thừa Thiên Huế</option>
+                        <option>Tiền Giang</option>
+                        <option>Trà Vinh</option>
+                        <option>Tuyên Quang</option>
+                        <option>Vĩnh Long</option>
+                        <option>Vĩnh Phúc</option>
+                        <option>Yên Bái</option>
+                        <option>Đắk Lắk</option>
+                        <option>Đắk Nông</option>
+                        <option>Điện Biên</option>
+                        <option>Đồng Nai</option>
+                        <option>Đồng Tháp</option>
+                    </select>
+                    <span id="select-error"></span>
+                </label>
+                <br>
+                <label><span class="title">Nhập địa chỉ chi tiết :</span> <input type="text" id="address" onblur="validate4()"></label><span id="address-error"></span> </fieldset>
+                </form>
+                <form id="confirm-form">
+                        <fieldset>
+                                <legend>KIỂM TRA LẠI ĐƠN HÀNG</legend>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="content"></tbody>
+                                    <tfoot></tfoot>
+                                </table>
+                            </fieldset>
+                </form></div>
+            <!-- <button id="confirm" onclick="confirm()">Xác nhận đơn hàng</button> -->
+    </div>
+    <!-- //////////////////////////////////////// -->
+    <button id="myBtn" onclick="confirm(); abcd()">Xác nhận đơn hàng</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Đã tiếp nhận đơn hàng, cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</h2>
+      <h3>Thời gian vận chuyển từ 3 - 4 ngày</h3>
+      <h3>Mọi vấn đề xin liên hệ : 0788011389</h3>
+    </div>
+    
+  </div>
+</div>
+    <script src="./javascript/thongtin.js"></script>
+</body>
+</html>

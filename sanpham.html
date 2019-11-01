@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="./css/sanpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+    <div id="main-container">
+        <header id="header">
+            <div id="abc">
+                <div id="header-header">
+                    <span>Hotline: 00000000000000</span>
+                    <span>Tổng đài tư vấn: 0000</span>
+                    <a href="#">Đăng nhập</a>
+                </div>
+                <div id="clear"></div>
+            </div>
+                <div id="main-header">
+                        <form id="search-form" onsubmit="searchBook()">
+                                <input type="text" placeholder="Tìm kiếm............" id="input">
+                                <button id="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                    <img id="logo" src="./Image/54c02d2475983f93a024c0cd13f238e4.png" style="width: 100px; height: auto;">
+                    <a href="./giohang.html"><button id="shop"><i class="fa fa-shopping-cart" style="font-size:30px"></i>Giỏ hàng</button></a>
+                    <div id = 'add-to-cart-sucess'><i class="fa fa-check-circle" style="font-size:20px;color:green"></i>Thêm vào giỏ hàng thành công <button id="close" onclick="closeDiv()"><i class="fa fa-close" style="font-size:18px"></i></button></div>
+                  </div>
+                <ul id="menu">
+                    <li><a href='file:///C:/Users/Admin/Desktop/C4E,js/project%202/index.html?#'>Trang chủ<a></li>
+                        <li><a href='./category.html' onclick="goToCategory(this)">Kỹ năng
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Kỹ năng sống<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tâm lý<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Rèn luyện nhân cách<a></li>
+                            </ul>
+                        <a></li>
+                        <li><a href='./category.html' onclick="goToCategory(this)">Văn học
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tiểu thuyết<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Ngôn tình<a></li>
+                            </ul>
+                        <a></li>
+                        <li><a href='./category.html' onclick="goToCategory(this)">Kinh tế
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Marketing<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Nhân vật-Bài học kinh doanh<a></li>
+                            </ul>
+                        <a></li>
+                       
+                    </ul>
+                
+                 
+              
+                </ul>
+        </header>
+        
+        <div id="content">
+                <div id="container">
+                        <div id="left">
+                            <img src="" title="Đây là ảnh" id="img">
+                        </div>
+                        <div id="right">
+                            <h1 id="name"></h1>
+                            <p >Tác giả: <a href="#" id="author"></a></p>
+                            <p>Nhà xuất bản: <a href="#" id="nxb"></a></p>
+                            <p id="price">Giá</p>
+                            <p id="a"><span id="intro"></span><button id="readmore-btn" onclick="readmore()">Xem thêm</button></p>
+                            
+                            <div id="clear"></div>
+                            Số lượng: 
+                            <input type="number" id="quality" min="1" value="1" max="30" onchange = "changed(this)">
+                            <button id="btn" onclick="add();addToCartSucess()">Thêm vào giỏ hàng</button>
+                            <p id="vertify">Sản phẩm đã được thêm vào giỏ hàng</p>
+                        </div>
+                        
+                </div>
+               
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'infor')">Thông tin chi tiết</button>
+                    <button class="tablinks" onclick="openCity(event, 'rate')">Đánh giá</button>
+                  </div>
+                  
+                
+                  
+                  <div id="infor" class="tabcontent">
+                    <h3></h3>
+                    <p></p> 
+                  </div>
+                  
+                  <div id="rate" class="tabcontent">
+                    <h3></h3>
+                    <p></p>
+                  </div>
+        </div>
+        
+        <footer id="footer">Footer</footer>
+    </div>
+    
+    <script src="./javascript/listBooks.js"></script>
+    <script src="./javascript/sanpham.js"></script>
+</body>
+</html>

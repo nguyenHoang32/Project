@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./css/giohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><i class="fa fa-shopping-cart"></i> Giỏ hàng</h1>
+    <div id="result">Thành tiền: <span id="total"></span>
+        <a href="./thongtin.html"><button id="pay" onclick="buy()">Tiến hành đặt hàng</button></a> 
+    </div>
+
+    <div id="divdisplay">
+        <div class="container">
+            <div>
+            </div>
+            <div class="content">
+                <a href="#" class="name"></a>
+                <p>Tác giả: <span class="author"></span></p>
+                <button>Xóa</button>
+                
+            </div>
+        
+        </div>
+    </div>
+    <script src="./javascript/giohang.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+#header,#content,#footer,#advert{
+    border: 1px solid black;
+}
+#header{
+    grid-area: header;
+}
+#adver{
+    grid-area: advert;
+}
+#content{
+    grid-area: content1;
+}
+#footer{
+    grid-area: footer;
+}
+#container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.item{
+    width: 95%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    transition: 1s;
+    text-decoration: none;
+    margin: 5px;
+}
+.item:hover{
+    transform: scale(1.07);
+    border: 1px solid #1f601f;
+}
+p{
+    display: inline-block;
+}
+#select{
+    float: right;
+}
+#clear{
+    clear: both;
+}
+#select{
+    margin: 15px;
+    padding: 10px;
+}
+img{
+    height: 200px;
+    width: auto;
+}
+#main-container{
+    width: 92%;
+    margin: auto;
+    font-size: 20px;
+}

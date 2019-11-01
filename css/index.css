@@ -1,0 +1,120 @@
+*{
+    padding: 0px;
+    margin: 0px;  
+}
+h2{
+    background-color: #199427;
+    color: white;
+    width: 200px;
+}
+#main-container{
+    width: 92%;
+    margin: auto;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #777;
+}
+#header-header{
+    float: right;
+}
+#abc{
+    background-color: rgba(119, 119, 119, 0.76);
+
+}
+#clear{
+    clear: both;
+}
+#main-header{
+    display: grid;
+    grid-template-areas: "logo search shop";
+    align-items: center;
+    justify-items: center;
+}
+#search-form{
+    grid-area: search;
+    width: 100%;
+    border: 1px solid orangered;
+}
+#input{
+    box-sizing: border-box;
+    width: 89%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+#search-btn{
+    float: right;
+    width: 11%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+#logo{
+    grid-area: logo;
+}
+#shop{
+    grid-area: shop;
+    width: 200px;
+    height: 50px;
+}
+#menu{
+    background-color: #1f601f;
+    text-align: center;
+}
+#menu a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+#menu li{
+    padding: 20px;
+    color: white;
+    display: inline-block;
+   
+    position: relative;
+    width: 120px;
+}
+#menu ul li {
+    display: none;
+
+}
+#menu li:hover .submenu li{
+    display: block;
+}
+#menu ul {
+    margin: 20px;
+    margin-left: -20px;
+    background-color: #1f601f;
+    width: 100%;
+    position: absolute;
+}
+#menu li:hover {
+    background-color: #3ec73e;
+    color: #333;
+}
+
+.container-sach{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.container-sach img{
+    height: 200px;
+}
+.item{
+    width: 95%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    transition: 1s;
+    text-decoration: none;
+    margin: 10px;
+}
+.item:hover{
+    transform: scale(1.07);
+    border: 1px solid #1f601f;
+}
+#feedback{
+    font-size: 15px;
+    text-align: center;
+}
