@@ -78,7 +78,7 @@ img{
     width: 11%;
     height: 40px;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;   
 }
 #shop{
     grid-area: shop;
